@@ -13,7 +13,6 @@ import com.example.ed.twittertimelinesearch.POJOs.TwitterTweet;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class TwitterAsyncTask extends AsyncTask<Object, Void, ArrayList<TwitterTweet>> {
     static Activity callerActivity;
@@ -21,10 +20,10 @@ public class TwitterAsyncTask extends AsyncTask<Object, Void, ArrayList<TwitterT
 
     boolean found = false;
     boolean checkBox;
-    int arraySize, c = 0;
+    int arraySize;
     public static int p1, p2, p3, p4;
-    final static String TWITTER_API_KEY = "FAlzZ0XaqD6FYAbnQHyhOz8Tw";
-    final static String TWITTER_API_SECRET = "s55Ww9XCXOrxOblH5p7NaJYgBsVUcptCP1z8Gxb6a2bSbDtGum";
+    final String TWITTER_API_KEY = "FAlzZ0XaqD6FYAbnQHyhOz8Tw";
+    final String TWITTER_API_SECRET = "s55Ww9XCXOrxOblH5p7NaJYgBsVUcptCP1z8Gxb6a2bSbDtGum";
 
     @Override
     protected ArrayList<TwitterTweet> doInBackground(Object... params) {
@@ -39,7 +38,7 @@ public class TwitterAsyncTask extends AsyncTask<Object, Void, ArrayList<TwitterT
             twitterTweets = twitterAPI.getTwitterTweets(params[0].toString());
 
             arraySize = twitterTweets.size();
-            extract(arraySize, c, twitterTweets, foundTwitterTweets);
+            extract(arraySize, twitterTweets, foundTwitterTweets);
         }
 
         return foundTwitterTweets;
@@ -78,8 +77,8 @@ public class TwitterAsyncTask extends AsyncTask<Object, Void, ArrayList<TwitterT
         TimelineActivity.progressDialog.dismiss();
     }
 
-    private void extract(int arraySize, int c, ArrayList<TwitterTweet> twitterTweets, ArrayList<TwitterTweet> foundTwitterTweets) {
-        c = 0;
+    private void extract(int arraySize, ArrayList<TwitterTweet> twitterTweets, ArrayList<TwitterTweet> foundTwitterTweets) {
+        int c = 0;
         if (TimelineActivity.getMessages(1).equals("false")) {
             Log.v("tusti parametrai", "tusti parametrai");
         } else {

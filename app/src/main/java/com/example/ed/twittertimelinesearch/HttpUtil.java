@@ -42,9 +42,7 @@ public class HttpUtil {
                 sb.append(reason);
             }
             result = sb.toString();
-        } catch (UnsupportedEncodingException ex) {
-        } catch (ClientProtocolException ex1) {
-        } catch (IOException ex2) {
+        } catch (IOException ignored) {
         }
         return result;
     }

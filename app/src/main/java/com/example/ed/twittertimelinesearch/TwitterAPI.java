@@ -41,8 +41,7 @@ public class TwitterAPI {
             TwitterAuthToken twitterAuthToken = getTwitterAuthToken(twitterKeyBase64);
             //Twitter Array List
             twitterTweetArrayList = getTwitterTweets(screenName, twitterAuthToken);
-        } catch (UnsupportedEncodingException ex) {
-        } catch (IllegalStateException ex1) {
+        } catch (UnsupportedEncodingException | IllegalStateException ignored) {
         }
         return twitterTweetArrayList;
     }
@@ -85,7 +84,7 @@ public class TwitterAPI {
             try {
                 Gson gson = new Gson();
                 twitterAuthToken = gson.fromJson(jsonAuth, TwitterAuthToken.class);
-            } catch (IllegalStateException ex) {
+            } catch (IllegalStateException ignored) {
             }
         }
         return twitterAuthToken;
@@ -99,7 +98,7 @@ public class TwitterAPI {
                 twitterTweetArrayList =
                         gson.fromJson(twitterTweets, new TypeToken<ArrayList<TwitterTweet>>() {
                         }.getType());
-            } catch (IllegalStateException e) {
+            } catch (IllegalStateException ignored) {
             }
         }
         return twitterTweetArrayList;

@@ -2,6 +2,7 @@ package com.example.ed.twittertimelinesearch;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,6 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class TweetAdapter extends ArrayAdapter<TwitterTweet> {
-    private LayoutInflater inflater;
     ArrayList<TwitterTweet> tT;
     Activity ac;
 
@@ -24,7 +24,7 @@ public class TweetAdapter extends ArrayAdapter<TwitterTweet> {
         super(activity, R.layout.one_tweet, twitterTweets);
         this.tT = twitterTweets;
         this.ac = activity;
-        inflater = activity.getWindow().getLayoutInflater();
+        LayoutInflater inflater = activity.getWindow().getLayoutInflater();
     }
 
     //modify to use tweet array
@@ -32,10 +32,9 @@ public class TweetAdapter extends ArrayAdapter<TwitterTweet> {
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
             // This a new view we inflate the new layout
-            LayoutInflater inflater = (LayoutInflater) ac.getSystemService(ac.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) ac.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.one_tweet, parent, false);
         }
-
 
         //filling Views
         TextView textView1 = (TextView) convertView.findViewById(R.id.textView1);

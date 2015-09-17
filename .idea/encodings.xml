@@ -13,9 +13,6 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/one_tweet.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/test_listview.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/values-w820dp/colorss.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/values-w820dp/strings.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/values-w820dp/styless.xml" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
