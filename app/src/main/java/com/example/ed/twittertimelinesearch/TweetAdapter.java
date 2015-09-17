@@ -55,7 +55,6 @@ public class TweetAdapter extends ArrayAdapter<TwitterTweet> {
             textView3.setText(t.getCreatedAt());
             Picasso.with(convertView.getContext()).load(t.getTwitterUser().getProfileImageUrl()).into(imageView);
         }
-
         return convertView;
     }
 }
