@@ -8,8 +8,9 @@
     <string name="parameters">Parameters:</string>
     <string name="no_tweets">No Tweets</string>
     <string name="check_box">include retweets</string>
-    <string name="twitter_username">Twitter username</string>
+    <string name="twitter_username">Twitter username id</string>
     <string name="profile_image">profile_image</string>
+    <string name="search_sign">\u0040</string>
     <string name="user">user</string>
     <string name="par4">par4</string>
     <string name="par3">par3</string>

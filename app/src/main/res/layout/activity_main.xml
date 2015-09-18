@@ -37,11 +37,27 @@
 
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/search"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/twitter_username" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:editable="false"
+            android:linksClickable="false"
+            android:text="\@" />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/twitter_username" />
+    </LinearLayout>
+
 
     <CheckBox
         android:id="@+id/checkBox"
