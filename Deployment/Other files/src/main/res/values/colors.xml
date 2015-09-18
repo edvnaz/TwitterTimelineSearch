@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_white">#fff</color>
+    <color name="background_twitter">#fff</color>
+    <color name="background_twitter_darker">#f1f4f6</color>
+    <color name="twitter_blue">#53A9EA</color>
+    <color name="timeline_background">#F5F8FA</color>
+</resources>
